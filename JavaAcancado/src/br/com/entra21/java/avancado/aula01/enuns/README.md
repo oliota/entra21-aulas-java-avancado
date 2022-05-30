@@ -68,9 +68,9 @@
 		}
 	}
 ```
+ 
 
-
-
+> - percorrer enum
 
 ```java 
 	for (VideoGames videoGame : VideoGames.values()) {
