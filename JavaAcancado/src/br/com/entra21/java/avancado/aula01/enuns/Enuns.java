@@ -1,12 +1,11 @@
 package br.com.entra21.java.avancado.aula01.enuns;
 
 import java.util.Scanner;
- 
 
 public class Enuns {
 
 	static Scanner entrada = new Scanner(System.in);
-	
+
 	public enum EstacoesSimples {
 		PRIMAVERA, VERAO, OUTONO, INVERNO,
 	}
@@ -50,16 +49,15 @@ public class Enuns {
 
 	public static void aprender() {
 
-		System.out.println("Com enum podemos agrupar constantes"); 
- 
-		
+		System.out.println("Com enum podemos agrupar constantes");
+
 		byte opcao;
 		do {
 			System.out.println("Menu - ENUM:");
 			System.out.println("0 - Voltar");
 			System.out.println("1 - Enum escrito local");
-			System.out.println("2 - Enum escrito separado"); 
-			System.out.println("3 - Percorrer ENUM");  
+			System.out.println("2 - Enum escrito separado");
+			System.out.println("3 - Percorrer ENUM");
 			opcao = entrada.nextByte();
 
 			switch (opcao) {
@@ -71,10 +69,10 @@ public class Enuns {
 				break;
 			case 2:
 				aprenderEnumIndividual();
-				break; 
+				break;
 			case 3:
 				percorrerEnum();
-				break;  
+				break;
 			default:
 				System.out.println("Escolha uma opção válida para aprender sobre ENUM");
 				break;
@@ -82,8 +80,6 @@ public class Enuns {
 
 		} while (opcao != 0);
 		System.out.println("Obrigado, volse sempre que quiser aprender mais sobre ENUM");
-
-		
 
 	}
 
@@ -119,7 +115,7 @@ public class Enuns {
 		System.out.println("-------------------------");
 
 	}
-	
+
 	private static void aprenderEnumIndividual() {
 
 		System.out.println("-------------------------");
@@ -142,32 +138,24 @@ public class Enuns {
 		System.out.println("Esportes FUTEBOL = " + Esportes.FUTEBOL.getValor() + " retorna o atributo do ENUM");
 
 		System.out.println("-------------------------");
- 
 
 	}
 
-	
-
-	 
-	
-	
-	
 	private static void percorrerEnum() {
 
 		System.out.println("-------------------------");
 		System.out.println("ENUNS percorrer como um vetor");
 		System.out.println("-------------------------");
 
-		
-		for (VideoGames videoGame : VideoGames.values()) {
-            System.out.println("TITULO = "+videoGame+" -  getName()= "+videoGame.name()+" - atributo getNome()= "+videoGame.getNome()+" - atributo getPreco()= "+videoGame.getPreco());
-        }
-		
-		 
+		for (int videoGame = 0; videoGame < VideoGames.values().length; videoGame++) {
+			System.out.println("TITULO = " + videoGame + " -  getName()= " + VideoGames.values()[videoGame].name()
+					+ " - atributo getNome()= " + VideoGames.values()[videoGame].getNome() + " - atributo getPreco()= "
+					+ VideoGames.values()[videoGame].getPreco());
+
+		}
+
 		System.out.println("-------------------------");
 
 	}
-	
-
 
 }
