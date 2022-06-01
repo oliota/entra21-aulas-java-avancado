@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 import br.com.entra21.java.avancado.aula01.enuns.Enuns;
 import br.com.entra21.java.avancado.aula01.wrappers.Wrappers;
+import br.com.entra21.java.avancado.aula02.list.arraylist.AprenderList;
 
 public class Main {
 
@@ -27,7 +28,7 @@ public class Main {
 				Enuns.aprender();
 				break;
 			case 3:
-				pedirPaciencia();
+				AprenderList.aprender();
 				break;
 			case 4:
 				pedirPaciencia();
