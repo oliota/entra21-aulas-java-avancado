@@ -5,6 +5,8 @@ import java.util.Scanner;
 import br.com.entra21.java.avancado.aula01.enuns.Enuns;
 import br.com.entra21.java.avancado.aula01.wrappers.Wrappers;
 import br.com.entra21.java.avancado.aula02.collections.list.AprenderList;
+import br.com.entra21.java.avancado.aula03.Aula03;
+import br.com.entra21.java.avancado.aula03.assuntos.Responsavel;
 
 public class Main {
 
@@ -31,7 +33,7 @@ public class Main {
 				AprenderList.aprender();
 				break;
 			case 4:
-				pedirPaciencia();
+				Aula03.aprender();
 				break;
 			case 5:
 				pedirPaciencia();
@@ -69,13 +71,12 @@ public class Main {
 		menu += "\n  2 - Aula 01 (pronto)- ENUM";// juntos 01
 
 		menu += "\n  3 - Aula 02 - Collections - LIST";// somente 02
-		menu += "\n  4 - Aula 03 - Annotations";// juntos 03
-		menu += "\n  5 - Aula 03 - Datas";// juntos 03
-		menu += "\n  6 - Aula 04 - Collections - SET";// somente 04
+		menu += "\n  4 - Aula 03 - Annotations e Datas";// juntos 03
+		menu += "\n  5 - Aula 04 - Collections - SET";// somente 04
 		menu += "\n  6 - Aula 05 - Collections - MAP";// somente 05
-		menu += "\n  8 - Aula 06 - Generics";// somente 06
-		menu += "\n  9 - Aula 07 - Exceções e tratamento de erros";// somente 07
-		menu += "\n 10 - Aula 08 - Funções Lambda"; // somente 08
+		menu += "\n  7 - Aula 06 - Generics";// somente 06
+		menu += "\n  8 - Aula 07 - Exceções e tratamento de erros";// somente 07
+		menu += "\n  9 - Aula 08 - Funções Lambda"; // somente 08
 		menu += "\n--------------------------------------------------------";
 		menu += "\n Escolha uma opção para aprender:";
 		menu += "\n--------------------------------------------------------";
@@ -83,6 +84,7 @@ public class Main {
 		return menu;
 	}
 
+	@Responsavel(ordemPrioridade = Responsavel.OrdemPrioridade.DOCUMENTAR, item = "Mostrar que não ta na hora", quemAssume = "Rubem Oliota")
 	private static void pedirPaciencia() {
 		System.out.println("CALMA CALMA CALMA, muita CALMA... ainda não esta pronto.");
 		System.out.println("--------------------------------------------------------");
