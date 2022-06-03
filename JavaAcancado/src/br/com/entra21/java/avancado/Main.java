@@ -1,12 +1,16 @@
 package br.com.entra21.java.avancado;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Scanner;
 
+import br.com.entra21.java.avancado.aula01.Aula01;
 import br.com.entra21.java.avancado.aula01.enuns.Enuns;
 import br.com.entra21.java.avancado.aula01.wrappers.Wrappers;
-import br.com.entra21.java.avancado.aula02.collections.list.AprenderList;
+import br.com.entra21.java.avancado.aula02.Aula02;
 import br.com.entra21.java.avancado.aula03.Aula03;
-import br.com.entra21.java.avancado.aula03.assuntos.Responsavel;
+import br.com.entra21.java.avancado.aula03.anotacoes.Responsavel;
+import br.com.entra21.java.avancado.aula04.Aula04;
 
 public class Main {
 
@@ -24,19 +28,20 @@ public class Main {
 				System.out.println("Até a proxima!");
 				break;
 			case 1:
-				Wrappers.aprender();
+				Aula01.aprender();
 				break;
 			case 2:
-				Enuns.aprender();
+				Aula02.aprender();
 				break;
 			case 3:
-				AprenderList.aprender();
-				break;
-			case 4:
 				Aula03.aprender();
 				break;
+			case 4:
+				new Aula04("Aula04 - Collections - SET - HashSet", new ArrayList<>(Arrays.asList("Definir","CRUD"))).aprender();
+				break;
 			case 5:
-				pedirPaciencia();
+				new Aula04("Aula05 - Collections - MAP - HashMap", null).aprender();
+				
 				break;
 			case 6:
 				pedirPaciencia();
@@ -67,10 +72,8 @@ public class Main {
 	private static String montarMenu() {
 		String menu = "Módulo sobre JAVA AVANÇADO:";
 		menu += "\n  0 - Sair";
-		menu += "\n  1 - Aula 01 (pronto)- Classes Wrapper";// juntos 01
-		menu += "\n  2 - Aula 01 (pronto)- ENUM";// juntos 01
-
-		menu += "\n  3 - Aula 02 - Collections - LIST";// somente 02
+		menu += "\n  1 - Aula 01  ENUM e Classes Wrapper";
+		menu += "\n  2 - Aula 02 - Collections - LIST";// somente 02
 		menu += "\n  4 - Aula 03 - Annotations e Datas";// juntos 03
 		menu += "\n  5 - Aula 04 - Collections - SET";// somente 04
 		menu += "\n  6 - Aula 05 - Collections - MAP";// somente 05

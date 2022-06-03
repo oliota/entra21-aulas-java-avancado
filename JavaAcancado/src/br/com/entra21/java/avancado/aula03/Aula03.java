@@ -12,9 +12,10 @@ import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.Scanner;
 
-import br.com.entra21.java.avancado.aula03.assuntos.InProgress;
-import br.com.entra21.java.avancado.aula03.assuntos.Lembrete;
-import br.com.entra21.java.avancado.aula03.assuntos.Responsavel;
+import br.com.entra21.java.avancado.aula03.anotacoes.InProgress;
+import br.com.entra21.java.avancado.aula03.anotacoes.Lembrete;
+import br.com.entra21.java.avancado.aula03.anotacoes.Responsavel;
+import br.com.entra21.java.avancado.aula03.datas.Datas;
 
 public class Aula03 {
 
@@ -43,7 +44,8 @@ public class Aula03 {
 				System.out.println("Até a proxima!");
 				break;
 			case 1:
-				aprenderDatas();
+				Datas.aprenderDatasComputador();
+				Datas.aprenderDatasHumanizadas();
 				break;
 			case 2:
 				aprenderAnotacoes();
@@ -69,37 +71,7 @@ public class Aula03 {
 		
 	}
  
-	private static void aprenderDatas() {
-		System.out.println("Assunto datas");
-
-		DateTimeFormatter formatters = DateTimeFormatter.ofPattern("dd/MM/YYYY");
-	  
-	    	
-		LocalDate hoje = LocalDate.now();
-		System.out.println(hoje); // YYYY-MM-DD(formato ISO-8601)
-		System.out.println(formatters.format(hoje)); 
-		
-		LocalDate nascimento = LocalDate.of(1990, 12, 30);
-		System.out.println(nascimento); 
-		System.out.println(nascimento); 
-
-		LocalDate essaQuinta = LocalDate.of(2022, Month.JUNE, 2);
-
-		Period periodo = Period.between(nascimento, essaQuinta);
-		
-		System.out.println("Entre meu nascimento e essa quinta");
-		System.out.println("anos = " + periodo.getYears());
-		System.out.println("meses = " + periodo.getMonths());
-		System.out.println("dias = " + periodo.getDays());
-		System.out.println("Mas quem esta contando? a API de datas do Java :)  ");
-
-		LocalTime horarioDeEntrada = LocalTime.of(18, 15);
-		System.out.println(horarioDeEntrada); // 09:00
-		
-		
-
-	}
-
+	 
 	@SuppressWarnings({ "rawtypes", "unchecked" })
 	private static void aprenderAnotacoes() {
 		System.out.println("Assunto anotações");
