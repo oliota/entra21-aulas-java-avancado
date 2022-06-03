@@ -10,7 +10,7 @@ public @interface Responsavel {
 		CRITICO, IMPORTANTE, TRIVIAL, DOCUMENTAR
 	};
 
-	OrdemPrioridade ordemPrioridade() ;
+	OrdemPrioridade ordemPrioridade() default OrdemPrioridade.IMPORTANTE;
 
 	String item();
 

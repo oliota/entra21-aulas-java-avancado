@@ -20,7 +20,11 @@ public class Aula03 {
 
 	static Scanner entrada = new Scanner(System.in);
 
-	@Responsavel(ordemPrioridade = Responsavel.OrdemPrioridade.CRITICO, item = "Mostrar API de datas e anotações", quemAssume = "Rubem Oliota")
+	@Responsavel(
+			ordemPrioridade = Responsavel.OrdemPrioridade.CRITICO,
+			item = "Mostrar API de datas e anotações",
+			quemAssume = "Rubem Oliota"
+			)
 	static public  void aprender() {
 		System.out.println(
 				"Com a nova API de datas ficou mais facil programar e as anotações facilitam a configuração do código");
