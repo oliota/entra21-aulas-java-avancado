@@ -126,6 +126,7 @@ public class AprenderList {
 
 	}
 
+	@Deprecated
 	private static void aprenderLinkedList() {
 		LinkedList<String> nomes = new LinkedList<>();
 		 
