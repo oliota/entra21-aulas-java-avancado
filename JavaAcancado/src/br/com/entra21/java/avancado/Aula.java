@@ -3,7 +3,7 @@ package br.com.entra21.java.avancado;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Aula {
+public class Aula {// classe que parece um algoritmo
 
 	Scanner entrada = new Scanner(System.in);
 	private String titulo;
@@ -24,7 +24,7 @@ public class Aula {
 				for (int contador = 0; contador < assuntos.size(); contador++) {
 					System.out.println(" " + (contador + 1) + " = " + assuntos.get(contador));
 				}
-			}else {
+			} else {
 				System.out.println("Não há itens especificos para essa aula???");
 			}
 
@@ -39,7 +39,6 @@ public class Aula {
 
 		case -1:
 			System.exit(-1);
-			;
 			break;
 		case 0:
 			System.out.println("Até a proxima!");

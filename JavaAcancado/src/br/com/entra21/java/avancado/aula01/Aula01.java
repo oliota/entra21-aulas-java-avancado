@@ -3,10 +3,12 @@ package br.com.entra21.java.avancado.aula01;
 import java.util.Scanner;
 
 import br.com.entra21.java.avancado.aula01.enuns.Enuns;
+import br.com.entra21.java.avancado.aula03.anotacoes.Lembrete;
 
 public class Aula01 {
 
 	static Scanner entrada = new Scanner(System.in);
+	 
 	public static void aprender() {
 
 		System.out.println("Assuntos da aula 01");

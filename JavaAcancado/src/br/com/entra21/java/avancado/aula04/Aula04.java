@@ -16,9 +16,9 @@ public class Aula04 extends Aula {
 
 	@Override
 	public byte capturarOpcao() {
-		byte opcao = super.capturarOpcao();
-		switch (opcao) {
 
+		byte opcao = super.capturarOpcao();
+		switch (opcao) { 
 		case 1:
 			aprenderHashSet();
 			break;
@@ -151,7 +151,7 @@ public class Aula04 extends Aula {
 			System.out.println(linguagem);
 		}
 		System.out.println("Deletando Typescript");
-		linguagens.remove("Typescript"); 
+		linguagens.remove("Typescript");
 		System.out.println("Deletando GoLang que nao existe");
 		linguagens.remove("GoLang");
 		System.out.println("--------- listando linguagens depois --------------");
