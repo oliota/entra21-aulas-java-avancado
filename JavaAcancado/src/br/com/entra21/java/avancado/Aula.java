@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class Aula {// classe que parece um algoritmo
 
-	Scanner entrada = new Scanner(System.in);
+	private Scanner entrada = new Scanner(System.in);
 	private String titulo;
 	private ArrayList<String> assuntos;
 
@@ -50,5 +50,15 @@ public class Aula {// classe que parece um algoritmo
 	public String getTitulo() {
 		return titulo;
 	}
+
+	public Scanner getEntrada() {
+		return entrada;
+	}
+
+	public void setEntrada(Scanner entrada) {
+		this.entrada = entrada;
+	}
+	
+	
 
 }

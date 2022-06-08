@@ -14,10 +14,12 @@ import br.com.entra21.java.avancado.aula03.Aula03;
 import br.com.entra21.java.avancado.aula03.anotacoes.Responsavel;
 import br.com.entra21.java.avancado.aula04.Aula04;
 import br.com.entra21.java.avancado.aula05.Aula05;
+import br.com.entra21.java.avancado.aula06.Aula06;
 
 public class Main {
 
 	static Scanner entrada = new Scanner(System.in);
+	final static int ZERO = 0;
 
 	public static void main(String[] args) {
 
@@ -27,7 +29,7 @@ public class Main {
 			opcao = entrada.nextByte();
 
 			switch (opcao) {
-			case 0:
+			case ZERO:
 				System.out.println("Até a proxima!");
 				break;
 			case 1:
@@ -51,11 +53,16 @@ public class Main {
 				break;
 			case 5:
 				new Aula05("Aula05 - Collections - MAP - HashMap",
-						new ArrayList<>(Arrays.asList("Definir", "Create", "Read", "Update", "Delete","Exemplo prático"))).aprender();
+						new ArrayList<>(
+								Arrays.asList("Definir", "Create", "Read", "Update", "Delete", "Exemplo prático")))
+										.aprender();
 
 				break;
 			case 6:
-				pedirPaciencia();
+				new Aula06("Aula06 - Generics - HashMap(exercicio)",
+						new ArrayList<>(
+								Arrays.asList("criar interface", "usar interface")))
+										.aprender();
 				break;
 			case 7:
 				pedirPaciencia();
@@ -75,7 +82,7 @@ public class Main {
 				break;
 			}
 
-		} while (opcao != 0);
+		} while (opcao != ZERO);
 		System.out.println("Obrigado, volse sempre que quiser aprender mais sobre JAVA AVANÇADO");
 
 	}
