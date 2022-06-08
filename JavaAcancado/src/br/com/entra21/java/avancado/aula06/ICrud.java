@@ -26,7 +26,7 @@ public interface ICrud<T> {
 
 	@Lembrete(value = "Busca um valor com base em um campo chave e devolve o item quando encontra, faça do seu jeito\"")
 	public T buscar(T chave);
-	// 3º forma de generics, retonar e solicitar parametro de um 'Tipo' que eu ainda
+	// 3º forma de generics, retornar e solicitar parametro de um 'Tipo' que eu ainda
 	// nem sei oq é
 
 	@Lembrete(value = "Edita um valor com base em um campo chave, faça do seu jeito")
@@ -48,7 +48,7 @@ public interface ICrud<T> {
 
 	@Lembrete(value = "Retorna um valor que é considerado item completo, faça do seu jeito")
 	public T capturarValores();
-	// 1º forma de generics, retonar um 'Tipo' que eu ainda nem sei oq é
+	// 1º forma de generics, retornar um 'Tipo' que eu ainda nem sei oq é
 
 
 	@Lembrete(value = "Espera um item completo para exibir seus detalhes, faça do seu jeito")
