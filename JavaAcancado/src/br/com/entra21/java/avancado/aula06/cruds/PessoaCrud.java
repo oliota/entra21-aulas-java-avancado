@@ -9,8 +9,7 @@ import br.com.entra21.java.avancado.aula06.Aula06;
 import br.com.entra21.java.avancado.aula06.ICrud;
 
 public class PessoaCrud implements ICrud<Pessoa>{
-
-	private static final String CAMPO_CHAVE = "nome";
+ 
 	private Scanner entrada = new Scanner(System.in);
 	public void gerenciar() {
 		byte opcao;
@@ -59,10 +58,8 @@ public class PessoaCrud implements ICrud<Pessoa>{
 	@Override
 	public void listar(HashMap<String, Pessoa> lista) {
 		System.out.println("============= Listando pessoas ==============");
-		for (Entry<String, Pessoa> pessoa : lista.entrySet()) {
-			System.out.println("Chave: "+pessoa.getKey());
-			System.out.println("Valor: " );
-			System.out.println("Nome:"+ pessoa.getValue().getNome()+", idade:"+pessoa.getValue().getIdade());
+		for (Entry<String, Pessoa> pessoa : lista.entrySet()) { 
+			System.out.println("CHAVE:"+pessoa.getKey()+"\t\tNome:"+ pessoa.getValue().getNome()+", idade:"+pessoa.getValue().getIdade());
 		}
 		System.out.println("============="+lista.size()+"==============");
 		
@@ -74,7 +71,7 @@ public class PessoaCrud implements ICrud<Pessoa>{
 		if (buscar(novo) == null) {
 			Aula06.pessoas.put(novo.getNome(),novo);
 		} else {
-			System.out.println("Já existe um registro com "+CAMPO_CHAVE+":" + novo.getNome());
+			System.out.println("Já existe um registro com CHAVE:" + novo.getNome());
 		}
 
 	}
@@ -89,9 +86,9 @@ public class PessoaCrud implements ICrud<Pessoa>{
 	public void editar(Pessoa chave) {
 		Pessoa atual = buscar(chave);
 		if (atual == null) {
-			System.out.println("Não existe um registro com "+CAMPO_CHAVE+":" + chave.getNome());
+			System.out.println("Não existe um registro com CHAVE:" + chave.getNome());
 		} else {
-			Aula06.pessoas.put(chave.getNome(),capturarValores()) ;
+			Aula06.pessoas.put(atual.getNome(),capturarValores()) ;
 			System.out.println("Dados atualizados");
 		}
 	}
@@ -100,9 +97,9 @@ public class PessoaCrud implements ICrud<Pessoa>{
 	public void deletar(Pessoa chave) {
 		Pessoa atual = buscar(chave);
 		if (atual == null) {
-			System.out.println("Não existe um registro com "+CAMPO_CHAVE+":" + chave.getNome());
+			System.out.println("Não existe um registro com CHAVE:" + chave.getNome());
 		} else {
-			Aula06.pessoas.remove(chave.getNome());
+			Aula06.pessoas.remove(atual.getNome());
 			System.out.println("Item excluido");
 		}
 
@@ -111,7 +108,7 @@ public class PessoaCrud implements ICrud<Pessoa>{
 	@Override
 	public Pessoa capturarChave() {
 		Pessoa formulario = new Pessoa();
-		System.out.println("Informe o " + CAMPO_CHAVE);
+		System.out.println("Informe a CHAVE"  );
 		formulario.setNome(entrada.next());
 		return formulario;
 	}
@@ -120,7 +117,8 @@ public class PessoaCrud implements ICrud<Pessoa>{
 	public Pessoa capturarValores() {
 		Pessoa formulario = new Pessoa();
 		
-		System.out.println("Informe o "+CAMPO_CHAVE);
+		System.out.println("============== Capturar dados completos");
+		System.out.println("Informe o nome" );
 		formulario.setNome(entrada.next());
 
 		System.out.println("Informe a idade:");

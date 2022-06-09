@@ -14,6 +14,14 @@ public class Aula06 extends Aula {
 
 	public Aula06(String titulo, ArrayList<String> assuntos) {
 		super(titulo, assuntos);
+
+		if(pessoas.isEmpty()) { 
+		pessoas.put("Fulano", new Pessoa("Fulano",(byte)33));
+		pessoas.put("Teste", new Pessoa("Teste",(byte)24));
+		pessoas.put("José", new Pessoa("José",(byte)17));
+		pessoas.put("Maria", new Pessoa("Maria",(byte)18));
+		}
+		
 	}
 
 	@Override
