@@ -14,9 +14,9 @@ Repositório com as práticas realizadas em aula
 
 | AULA | ASSUNTO |
 |------|---------|
-|Aula 01 - 01|Classes Wrappers
-|Aula 01 - 02|ENUM  
-|Aula 02 - 01|Collections - List - ArrayList  
-|Aula 02 - 02|Collections - List - LinkedList  
-|Aula 03 - 01|Trabalhando com Datas
-|Aula 03 - 01|Usando e criando anotações customizadas
+|Aula 01 |Classes Wrappers e ENUM  
+|Aula 02 |Collections - List - ArrayList e LinkedList  
+|Aula 03 |Trabalhando com Datas,Usando e criando anotações customizadas
+|Aula 04 |Collections - Set - HashSet
+|Aula 05 |Collections - Map - HashMap
+|Aula 06 |Generics e prática com HashMap
