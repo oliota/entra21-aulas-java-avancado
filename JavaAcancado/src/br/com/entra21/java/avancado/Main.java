@@ -15,6 +15,7 @@ import br.com.entra21.java.avancado.aula03.anotacoes.Responsavel;
 import br.com.entra21.java.avancado.aula04.Aula04;
 import br.com.entra21.java.avancado.aula05.Aula05;
 import br.com.entra21.java.avancado.aula06.Aula06;
+import br.com.entra21.java.avancado.aula07.Aula07;
 
 public class Main {
 
@@ -65,7 +66,10 @@ public class Main {
 										.aprender();
 				break;
 			case 7:
-				pedirPaciencia();
+				new Aula07("Aula07 - Exceções e tratamento de erros",
+						new ArrayList<>(
+								Arrays.asList("Tratamento de erros", "Obter informações do erro","Criar e utilizar nossas exceções","finally é importante?","Exemplo prático")))
+										.aprender();
 				break;
 			case 8:
 				pedirPaciencia();
