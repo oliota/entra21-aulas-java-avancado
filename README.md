@@ -20,3 +20,4 @@ Repositório com as práticas realizadas em aula
 |Aula 04 |Collections - Set - HashSet
 |Aula 05 |Collections - Map - HashMap
 |Aula 06 |Generics e prática com HashMap
+|Aula 07 |Exceptions e tratamento de erros
