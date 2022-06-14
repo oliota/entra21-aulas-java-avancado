@@ -2,6 +2,7 @@ package br.com.entra21.java.avancado;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Random;
 import java.util.Scanner;
 
 import javax.swing.JOptionPane;
@@ -16,13 +17,15 @@ import br.com.entra21.java.avancado.aula04.Aula04;
 import br.com.entra21.java.avancado.aula05.Aula05;
 import br.com.entra21.java.avancado.aula06.Aula06;
 import br.com.entra21.java.avancado.aula07.Aula07;
+import br.com.entra21.java.avancado.aula08.Aula08;
 
 public class Main {
 
 	static Scanner entrada = new Scanner(System.in);
-	final static int ZERO = 0;
+	final static int ZERO = 0; 
 
 	public static void main(String[] args) {
+ 
 
 		byte opcao;
 		do {
@@ -61,18 +64,18 @@ public class Main {
 				break;
 			case 6:
 				new Aula06("Aula06 - Generics - HashMap(exercicio)",
-						new ArrayList<>(
-								Arrays.asList("criar interface", "usar interface")))
-										.aprender();
+						new ArrayList<>(Arrays.asList("criar interface", "usar interface"))).aprender();
 				break;
 			case 7:
 				new Aula07("Aula07 - Exceções e tratamento de erros",
-						new ArrayList<>(
-								Arrays.asList("Tratamento de erros", "Obter informações do erro","Criar e utilizar nossas exceções","finally é importante?","Exemplo prático")))
+						new ArrayList<>(Arrays.asList("Tratamento de erros", "Obter informações do erro",
+								"Criar e utilizar nossas exceções", "finally é importante?", "Exemplo prático	")))
 										.aprender();
 				break;
 			case 8:
-				pedirPaciencia();
+				new Aula08("Aula08 - Lambda",
+						new ArrayList<>(Arrays.asList("Listar","Filtrar","Estatisticas","Ordenação")))
+										.aprender();
 				break;
 			case 9:
 				pedirPaciencia();

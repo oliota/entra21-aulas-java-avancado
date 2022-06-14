@@ -9,6 +9,7 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 import br.com.entra21.java.avancado.Aula;
+import br.com.entra21.java.avancado.BocaSujaUtils;
 import br.com.entra21.java.avancado.Pessoa;
 import br.com.entra21.java.avancado.aula06.cruds.PessoaCrud;
 import br.com.entra21.java.avancado.aula06.cruds.ProdutoCrud;
@@ -92,7 +93,7 @@ public class Aula07 extends Aula {
 		}
 
 		System.out.println("Vou fazer um calculo simples");
-		System.out.println("Informe um numero");
+		System.out.println("Inform	e um numero");
 		byte numeroA = getEntrada().nextByte();
 
 		System.out.println("Informe outro numero");
@@ -159,18 +160,23 @@ public class Aula07 extends Aula {
 
 		System.out.println("Informe o nome do aluno");
 		String nome = getEntrada().next();
-		ArrayList<Float> notas = new ArrayList<>();
-		float soma = 0;
-		do {
+		if (BocaSujaUtils.podeIssoArnaldo(nome)) {
+			ArrayList<Float> notas = new ArrayList<>();
+			float soma = 0;
+			do {
 
-			notas.add(capturarNota());
-		} while (querContinuar());
+				notas.add(capturarNota());
+			} while (querContinuar());
 
-		for (Float nota : notas) {
-			System.out.println("Nota:" + nota);
-			soma += nota;
+			for (Float nota : notas) {
+				System.out.println("Nota:" + nota);
+				soma += nota;
+			}
+			System.out.println("Média do aluno " + nome + " = " + (soma / notas.size()));
+
+		} else {
+			System.out.println("Que coisa feia...");
 		}
-		System.out.println("Média do aluno " + nome + " = " + (soma / notas.size()));
 
 	}
 
@@ -186,8 +192,8 @@ public class Aula07 extends Aula {
 		} catch (InputMismatchException e) {
 			System.out.println("Formato invalido para a nota do aluno");
 		} catch (NotaForaDaMargemException e) {
-			System.out.println(nota+" não parece ser uma nota válida: " + e.getMessage());
-			nota=null;
+			System.out.println(nota + " não parece ser uma nota válida: " + e.getMessage());
+			nota = null;
 		} catch (Exception e) {
 			System.out.println("Erro inesperado: " + e.getMessage());
 		} finally {
