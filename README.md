@@ -21,3 +21,12 @@ Repositório com as práticas realizadas em aula
 |Aula 05 |Collections - Map - HashMap
 |Aula 06 |Generics e prática com HashMap
 |Aula 07 |Exceptions e tratamento de erros
+|Aula 08 |Expressões Lambda
+|Aula 09 |Prática com listas e exercicios
+|Aula 09 |Entrega da 1º versão do projeto final com assuntos aprendidos até o momento
+
+## Projeto de exemplo 
+
+### Esse projeto contempla todos os assuntos vistos até o momento e pode ser usado como exemplo 
+
+[Projeto de exemplo](https://github.com/oliota/entra21-modelo-projeto-backend-2022/tree/agil-logica-poo-avancado)
