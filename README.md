@@ -23,7 +23,7 @@ Repositório com as práticas realizadas em aula
 |Aula 07 |Exceptions e tratamento de erros
 |Aula 08 |Expressões Lambda
 |Aula 09 |Prática com listas e exercicios
-|Aula 09 |Entrega da 1º versão do projeto final com assuntos aprendidos até o momento
+|Aula 10 |Entrega da 1º versão do projeto final com assuntos aprendidos até o momento
 
 ## Projeto de exemplo 
 
