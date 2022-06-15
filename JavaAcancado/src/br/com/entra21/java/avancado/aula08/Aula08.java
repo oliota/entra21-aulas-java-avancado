@@ -5,6 +5,7 @@ import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.InputMismatchException;
 import java.util.IntSummaryStatistics;
@@ -155,6 +156,43 @@ public class Aula08 extends Aula {
 		System.out.println("--------Listando nomes em ordem alfabetica------------");
 		nomes.sort(String::compareTo);
 		nomes.forEach(System.out::println);
+		
+		
+		ArrayList<Pessoa> pessoas = new ArrayList<>();
+		pessoas.add(new Pessoa("Juninho", (byte) 17));
+		pessoas.add(new Pessoa("Fulano", (byte) 18));
+		pessoas.add(new Pessoa("Zé", (byte) 12));
+		pessoas.add(new Pessoa("Maria", (byte) 31));
+		pessoas.add(new Pessoa("Ananias", (byte) 50));
+
+		System.out.println("--------Listando pessoas em ordem de criação  (é um classe com mais atributos)------------");
+		pessoas.forEach(pessoa-> {
+			System.out.println("Pessoa de maior:" + pessoa.getNome() + " - " + pessoa.getIdade());
+		});
+
+		System.out.println("--------Listando pessoas em ordem alfabetica  (é um classe com mais atributos)------------");
+		pessoas.sort( Comparator.comparing(Pessoa::getNome )) ; 
+		pessoas.forEach(pessoa-> {
+			System.out.println("Pessoa de maior:" + pessoa.getNome() + " - " + pessoa.getIdade());
+		});
+		
+		System.out.println("--------Listando pessoas em ordem alfabetica DECRESCENTE  (é um classe com mais atributos)------------");
+		pessoas.sort( Comparator.comparing(Pessoa::getNome ).reversed()) ; 
+		pessoas.forEach(pessoa-> {
+			System.out.println("Pessoa de maior:" + pessoa.getNome() + " - " + pessoa.getIdade());
+		});
+		
+		System.out.println("--------Listando pessoas em ordem de idade  (é um classe com mais atributos)------------");
+		pessoas.sort( Comparator.comparing(Pessoa::getIdade )) ; 
+		pessoas.forEach(pessoa-> {
+			System.out.println("Pessoa de maior:" + pessoa.getNome() + " - " + pessoa.getIdade());
+		});	
+		
+		System.out.println("--------Listando pessoas em ordem de idade DECRESCENTE  (é um classe com mais atributos)------------");
+		pessoas.sort( Comparator.comparing(Pessoa::getIdade ).reversed()) ; 
+		pessoas.forEach(pessoa-> {
+			System.out.println("Pessoa de maior:" + pessoa.getNome() + " - " + pessoa.getIdade());
+		});
 
 	}
 }
